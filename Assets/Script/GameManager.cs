@@ -4,6 +4,7 @@ using System.IO; // this is required for input and output of data
 using System;
 using System.Runtime.Serialization.Formatters.Binary;//this is required to convert data into binary
 using UnityEngine.UI;
+using GoogleMobileAds.Api;
 //MathAndScriptの方のゲームマネージャー
 
 public class GameManager : MonoBehaviour {
@@ -56,15 +57,12 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize(initStatus => { });
+        print("Admob初期化");
     }
 
-    void Update()
-    {
-        
-    }
-
-
-
+    
     void InitializeVariables()
     {
         Load();

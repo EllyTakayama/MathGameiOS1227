@@ -10,23 +10,15 @@ using DG.Tweening;//DoTweenを使用する記述
 
 public class backButton : MonoBehaviour
 {
-    [SerializeField] private GameObject studyPanel;
+   [SerializeField] private GameObject studyPanel;
    [SerializeField] private GameObject settingPanel;
-      [SerializeField] private GameObject playExPanel;
+   [SerializeField] private GameObject playExPanel;
+   [SerializeField] private GameObject TopMenuPanel;
+   [SerializeField] private GameObject ModeMenuPanel;
+
     //public Button homeBackButton;
     public Button thisButton;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void BackButton()
     {
         SoundManager.instance.PlaySEButton();//SoundManagerからSEButtonを実行
@@ -38,6 +30,10 @@ public class backButton : MonoBehaviour
         }
         if(studyPanel == true){
             studyPanel.SetActive(false);
+        }
+        if(ModeMenuPanel == true){
+            TopMenuPanel.SetActive(true);
+            ModeMenuPanel.SetActive(false);
         }
             //Invoke("TableBackMove",0.5f);
      

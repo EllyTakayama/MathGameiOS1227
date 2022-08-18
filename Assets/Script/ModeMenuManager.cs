@@ -105,11 +105,9 @@ public class ModeMenuManager : MonoBehaviour
          playExPanel.SetActive(true);
          
     }
+    
 
-    private void Update()
-    {
-       
-    }
+    
 
     public void Onclick(string buttonname)//段を選ぶボタンのScriptです。OnClickでボタンの名前を取得します
     { 

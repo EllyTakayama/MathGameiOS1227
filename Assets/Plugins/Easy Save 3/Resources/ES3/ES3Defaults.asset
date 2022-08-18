@@ -30,7 +30,6 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
-    - GoogleMobileAds
     - Assembly-CSharp
     - Sirenix.OdinInspector.CompatibilityLayer
     - PsdPlugin

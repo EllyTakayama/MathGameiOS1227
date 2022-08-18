@@ -79,7 +79,7 @@ public class AdMobInterstitial : MonoBehaviour
     //インタースティシャル読み込み失敗 となった時に起動する関数
     public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        Debug.Log("インタースティシャル読み込み失敗" + args.Message);//args.Message:エラー内容 
+        Debug.Log("インタースティシャル読み込み失敗" + args.LoadAdError);//args.Message:エラー内容 
     }
 
 

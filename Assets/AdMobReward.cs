@@ -86,6 +86,7 @@ public class AdMobReward : MonoBehaviour
 #endif
 
         CreateAndLoadRewardedAd();//リワード広告読み込み
+        MobileAds.SetiOSAppPauseOnBackground(true);
     }
 
     //リワード広告読み込む関数
@@ -115,9 +116,9 @@ public class AdMobReward : MonoBehaviour
     }
 
     //リワード読み込み失敗 となった時に起動する関数
-    public void HandleRewardedAdFailedToLoad(object sender, AdErrorEventArgs args)
+    public void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        Debug.Log("リワード広告読み込み失敗" + args.Message);//args.Message:エラー内容 
+        Debug.Log("リワード広告読み込み失敗" + args.LoadAdError);//args.Message:エラー内容 
     }
 
     //リワード広告閉じられた時に起動する関数
