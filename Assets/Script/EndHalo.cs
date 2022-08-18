@@ -10,27 +10,13 @@ public class EndHalo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         transform.DOScale(new Vector3(1.1f, 1.1f, 1f), 0.6f)
+        /*transform.DOScale(new Vector3(1.1f, 1.1f, 1f), 0.6f)
         .SetRelative()
-        ;
+        ;*/
        transform.DOLocalRotate(new Vector3(0, 0, 360f), 1.5f,RotateMode.FastBeyond360)
         .SetEase(Ease.OutCubic)
         .OnComplete(() => endHaloImage.SetActive(false))
         ;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    /*
-    public void EndHaloRotate(){
-        transform.DOLocalRotate(new Vector3(0, 0, 360f), 3f,RotateMode.FastBeyond360)
-        .SetEase(Ease.OutCubic)
-        .OnComplete(() => endHaloImage.SetActive(false))
-        ;
-    //Debug.Log("回転");
-    }
-    */
 }

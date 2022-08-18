@@ -8,29 +8,11 @@ using UnityEngine.UI;
 public class DoGradeImage : MonoBehaviour
 {
     public Image gradeImage;
-     public GameObject gameOverPanel;
+    public GameObject gameOverPanel;
 
-     
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-        
-    }
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void DoImageChange(){
          transform.DOScale(new Vector3(1.1f, 1.1f, 1f), 0.6f)
         .SetRelative()
         ;
     }
-    
-
-
 }

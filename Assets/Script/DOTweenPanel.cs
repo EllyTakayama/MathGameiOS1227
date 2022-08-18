@@ -11,10 +11,10 @@ public class DOTweenPanel : MonoBehaviour
     [SerializeField] private GameObject gradePiyoSprite;
     [SerializeField] private Image gradeImage;
     [SerializeField] private Sprite grade1;
-     [SerializeField] private Sprite grade2;
+    [SerializeField] private Sprite grade2;
     [SerializeField] private Sprite grade3;
-     [SerializeField] private Sprite grade4;
-     [SerializeField] private Sprite grade5;
+    [SerializeField] private Sprite grade4;
+    [SerializeField] private Sprite grade5;
     [SerializeField] private Text gradeText;
   
     
@@ -50,10 +50,8 @@ public class DOTweenPanel : MonoBehaviour
             gradePanel.SetActive(true);
             SoundManager.instance.PlaySE12GradePanel();
         Invoke("DoGradePanel",1.0f);
-       
+       }
     }
-    }
-
      
     }  
 
