@@ -13,15 +13,15 @@ public class ModeMenuManager : MonoBehaviour
    public  Button renshuu;
    public  Button test;
    [SerializeField] private GameObject ModeMenuPanel;
-    [SerializeField] private GameObject TopMenuPanel;
-    [SerializeField] GameObject[] Buttons;
-    [SerializeField] private GameObject studyPanel;
-     [SerializeField] private Text studyRecord;
-     [SerializeField] private GameObject ReAnnounceText;
-    [SerializeField] private GameObject TestAnnounceText;
-     [SerializeField] private GameObject MulToggle;
-      [SerializeField] private GameObject settingPanel;
-     [SerializeField] private GameObject playExPanel;
+   [SerializeField] private GameObject TopMenuPanel;
+   [SerializeField] GameObject[] Buttons;
+   [SerializeField] private GameObject studyPanel;
+   [SerializeField] private Text studyRecord;
+   [SerializeField] private GameObject ReAnnounceText;
+   [SerializeField] private GameObject TestAnnounceText;
+   [SerializeField] private GameObject MulToggle;
+   [SerializeField] private GameObject settingPanel;
+   [SerializeField] private GameObject playExPanel;
      public GameObject cloud1Image;
      public GameObject cloud1Image2;
      public GameObject AdMobManager;
@@ -77,8 +77,10 @@ public class ModeMenuManager : MonoBehaviour
     }
     public void SelectRecord()//成績パネル表示
     {
+      GameManager.singleton.SceneCount++;
+      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
         SoundManager.instance.PlaySEButton();//SoundManagerからPlaySE0を実行
-         studyPanel.SetActive(true);
+        studyPanel.SetActive(true);
          EasySaveManager.singleton.Load();
          studyRecord.text = EasySaveManager.singleton.str;
         
@@ -86,6 +88,8 @@ public class ModeMenuManager : MonoBehaviour
     
     public void SelectTable()//九九パネル表示
     {
+      GameManager.singleton.SceneCount++;
+      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
         SoundManager.instance.PlaySEButton();
         DOTween.KillAll();
         SceneManager.LoadScene("Kuku");
@@ -94,6 +98,8 @@ public class ModeMenuManager : MonoBehaviour
 
     public void SelectSetting()
     {
+      GameManager.singleton.SceneCount++;
+      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
         SoundManager.instance.PlaySEButton();
          settingPanel.SetActive(true);
          
@@ -101,9 +107,33 @@ public class ModeMenuManager : MonoBehaviour
 
     public void ExPlayPanel()//遊び方説明パネル表示
     {
+      GameManager.singleton.SceneCount++;
+      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
         SoundManager.instance.PlaySEButton();
          playExPanel.SetActive(true);
          
+    }
+    public void TopPanelMove()
+    {
+      GameManager.singleton.SceneCount++;
+      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
+
+        SoundManager.instance.PlaySEButton();//SoundManagerからSEButtonを実行
+        if(settingPanel == true){
+            settingPanel.SetActive(false);
+        }
+        if(playExPanel == true){
+            playExPanel.SetActive(false);
+        }
+        if(studyPanel == true){
+            studyPanel.SetActive(false);
+        }
+        if(ModeMenuPanel == true){
+            TopMenuPanel.SetActive(true);
+            ModeMenuPanel.SetActive(false);
+        }
+            //Invoke("TableBackMove",0.5f);
+     
     }
     
 

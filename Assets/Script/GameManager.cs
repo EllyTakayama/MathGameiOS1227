@@ -22,8 +22,9 @@ public class GameManager : MonoBehaviour {
     public int currentCount;
     public int currentMode;
     public bool test9;
-     public bool test7;
-     public bool test5;
+    public bool test7;
+    public bool test5;
+    public int SceneCount;//インタースティシャル広告表示のためにScene表示をカウントしていきます
    
     //public bool canAnswer;//Buttonの不具合を解消するため連続してボタンを押せなないよう制御
 
@@ -60,6 +61,9 @@ public class GameManager : MonoBehaviour {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(initStatus => { });
         print("Admob初期化");
+        LoadSceneCount();
+       //RequestReview();
+       Debug.Log("Sceneカウント"+SceneCount);
     }
 
     
@@ -103,6 +107,17 @@ public class GameManager : MonoBehaviour {
         }
 
 
+    }
+    public void SaveSceneCount(){
+        //isGfontsize = SettingManager.instance.isfontSize;
+        ES3.Save<int>("SceneCount",SceneCount,"SceneCount.es3" );
+        Debug.Log("セーブSceneCount"+SceneCount);
+    }
+    
+    public void LoadSceneCount(){
+         //if(ES3.KeyExists("isfontSize"))
+         SceneCount = ES3.Load<int>("SceneCount","SceneCount.es3",0);
+         Debug.Log("ロードSceneCount"+SceneCount);
     }
 
 
