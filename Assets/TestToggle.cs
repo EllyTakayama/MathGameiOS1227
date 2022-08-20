@@ -7,8 +7,8 @@ public class TestToggle : MonoBehaviour
 { 
     public Toggle test5Toggle;
     public Toggle test7Toggle;
-     public Toggle test9Toggle;
-     public static int testQuestion;
+    public Toggle test9Toggle;
+    public static int testQuestion;
     
     // Start is called before the first frame update
 
@@ -19,7 +19,12 @@ public class TestToggle : MonoBehaviour
     void Start()
     {
      OnTestToggLoad();
-      Debug.Log("TestQuestion"+testQuestion);
+     Debug.Log("TestQuestion"+testQuestion);
+     /*
+     if(GameManager.singleton.SceneCount==5||GameManager.singleton.SceneCount==30||
+        GameManager.singleton.SceneCount==800||GameManager.singleton.SceneCount==150){
+            StoreReviewManager.instance.RequestReview();
+        }*/
     }
 
     // Update is called once per frame
