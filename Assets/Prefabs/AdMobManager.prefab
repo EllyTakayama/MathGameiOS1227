@@ -40,7 +40,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9197166423184399451}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ccfba3f4d0c4500b100f8580104d31, type: 3}
   m_Name: 
@@ -58,6 +58,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RewardButton: {fileID: 0}
+  oyatsuReward: 0
+  endImage: {fileID: 0}
+  endHaloImage: {fileID: 0}
+  gameOverMarkText: {fileID: 0}
+  messageText: {fileID: 0}
 --- !u!114 &7537610360962824601
 MonoBehaviour:
   m_ObjectHideFlags: 0

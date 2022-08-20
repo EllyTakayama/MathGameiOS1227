@@ -1,7 +1,7 @@
 using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;//シーン移動に必要なため追加
 
 public class AdMobInterstitial : MonoBehaviour
 {
@@ -30,6 +30,7 @@ public class AdMobInterstitial : MonoBehaviour
         else
         {
             Debug.Log("広告読み込み未完了");
+            SceneManager.LoadScene("Menu");
         }
     }
 
@@ -56,8 +57,6 @@ public class AdMobInterstitial : MonoBehaviour
 
         //インタースティシャル広告初期化
         interstitial = new InterstitialAd(adUnitId);
-
-
         //InterstitialAd型の変数 interstitialの各種状態 に関数を登録
         interstitial.OnAdLoaded += HandleOnAdLoaded;//interstitialの状態が　インタースティシャル読み込み完了　となった時に起動する関数(関数名HandleOnAdLoaded)を登録
         interstitial.OnAdFailedToLoad += HandleOnAdFailedToLoad;//interstitialの状態が　インタースティシャル読み込み失敗 　となった時に起動する関数(関数名HandleOnAdFailedToLoad)を登録
@@ -94,6 +93,8 @@ public class AdMobInterstitial : MonoBehaviour
         //インタースティシャル再読み込み開始
         RequestInterstitial();
         Debug.Log("インタースティシャル広告再読み込み");
+        //シーン移動
+        SceneManager.LoadScene("Menu");
     }
 
 }

@@ -71,52 +71,46 @@ public class ModeMenuManager : MonoBehaviour
         TopMenuPanel.SetActive(false);
         MulToggle.SetActive(false);
         TestAnnounceText.SetActive(true);
-         SoundManager.instance.PlayBGM("ModeMenuPanel");
+        SoundManager.instance.PlayBGM("ModeMenuPanel");
         isPressed =false;
      
     }
     public void SelectRecord()//成績パネル表示
     {
-      GameManager.singleton.SceneCount++;
-      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
-        SoundManager.instance.PlaySEButton();//SoundManagerからPlaySE0を実行
-        studyPanel.SetActive(true);
-         EasySaveManager.singleton.Load();
-         studyRecord.text = EasySaveManager.singleton.str;
+      SoundManager.instance.PlaySEButton();//SoundManagerからPlaySE0を実行
+      studyPanel.SetActive(true);
+      EasySaveManager.singleton.Load();
+      studyRecord.text = EasySaveManager.singleton.str;
         
     }
     
     public void SelectTable()//九九パネル表示
     {
-      GameManager.singleton.SceneCount++;
-      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
-        SoundManager.instance.PlaySEButton();
-        DOTween.KillAll();
-        SceneManager.LoadScene("Kuku");
+      SoundManager.instance.PlaySEButton();
+      DOTween.KillAll();
+      SceneManager.LoadScene("Kuku");
         
     }
 
     public void SelectSetting()
     {
-      GameManager.singleton.SceneCount++;
-      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
-        SoundManager.instance.PlaySEButton();
-         settingPanel.SetActive(true);
+      SoundManager.instance.PlaySEButton();
+      settingPanel.SetActive(true);
          
     }
 
     public void ExPlayPanel()//遊び方説明パネル表示
     {
-      GameManager.singleton.SceneCount++;
-      Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
-        SoundManager.instance.PlaySEButton();
-         playExPanel.SetActive(true);
+      SoundManager.instance.PlaySEButton();
+      playExPanel.SetActive(true);
          
     }
     public void TopPanelMove()
     {
       GameManager.singleton.SceneCount++;
+      GameManager.singleton.SaveSceneCount();
       Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
+      int IScount = GameManager.singleton.SceneCount;
 
         SoundManager.instance.PlaySEButton();//SoundManagerからSEButtonを実行
         if(settingPanel == true){
@@ -132,7 +126,10 @@ public class ModeMenuManager : MonoBehaviour
             TopMenuPanel.SetActive(true);
             ModeMenuPanel.SetActive(false);
         }
-            //Invoke("TableBackMove",0.5f);
+        if(IScount>0 && IScount%1 ==0){
+            AdMobManager.GetComponent<AdMobInterstitial>().ShowAdMobInterstitial();
+            return;
+        }
      
     }
     

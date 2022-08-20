@@ -147,9 +147,8 @@ public class GUIManager1 : MonoBehaviour {
             if(AdMobManager.GetComponent<AdMobReward>().oyatsuReward == true){
             return;//アドモブ友好時には上書きでデータ更新ストップ
         }
-            
             //score 出題数を代入
-        　　markText.text = GameManager.singleton.currentScore.ToString();
+            markText.text = GameManager.singleton.currentScore.ToString();
            countText.text = GameManager.singleton.currentCount.ToString(); 
            //countText.GetComponent<CountText>().CountNum();
              if(GameManager.singleton.currentMode>10)
@@ -189,15 +188,19 @@ public class GUIManager1 : MonoBehaviour {
     {
          SoundManager.instance.PlaySEButton();//SoundManagerからSEButtonを実行
           Invoke("MenuBackMove",0.3f);
-       /*
-       EasySaveManager.singleton.Save();
-        SceneManager.LoadScene("Menu");
-        Debug.Log("back");
-        */
+       
     }
     void MenuBackMove(){
         EasySaveManager.singleton.Save();
         DOTween.KillAll();
+        GameManager.singleton.SceneCount++;
+        GameManager.singleton.SaveSceneCount();
+        Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
+        int IScount = GameManager.singleton.SceneCount;
+        if(IScount>0 && IScount%1 ==0){
+            AdMobManager.GetComponent<AdMobInterstitial>().ShowAdMobInterstitial();
+            return;
+        }
         SceneManager.LoadScene("Menu");
     }
     

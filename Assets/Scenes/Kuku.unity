@@ -11500,18 +11500,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9197166424522500118}
-        m_TargetAssemblyTypeName: AdMobInterstitial, Assembly-CSharp
-        m_MethodName: ShowAdMobInterstitial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &743368666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13687,49 +13675,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0.93333334, g: 0.93333334, b: 0.27058825, a: 1}
   m_EffectDistance: {x: 5, y: 5}
   m_UseGraphicAlpha: 1
---- !u!1 &868881510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 868881512}
-  - component: {fileID: 868881511}
-  m_Layer: 0
-  m_Name: MainMenuManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &868881511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 868881510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbce4dae065034867b7be604a8361e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &868881512
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 868881510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 360, y: 640, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &895626041
 GameObject:
   m_ObjectHideFlags: 0
@@ -19561,6 +19506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d3055d7aa534318a07a40d285dd85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AdMobManager: {fileID: 1899515983}
   thisButton: {fileID: 743368665}
 --- !u!4 &1250948660
 Transform:
@@ -28121,6 +28067,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891289801}
   m_CullTransparentMesh: 0
+--- !u!1 &1899515983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9197166423184399451, guid: 2545cfe8696974b5ba455aef3f04b8b6, type: 3}
+  m_PrefabInstance: {fileID: 9197166424522500117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1909291766
 GameObject:
   m_ObjectHideFlags: 0
@@ -31813,14 +31764,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2545cfe8696974b5ba455aef3f04b8b6, type: 3}
---- !u!114 &9197166424522500118 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7537610360962824601, guid: 2545cfe8696974b5ba455aef3f04b8b6, type: 3}
-  m_PrefabInstance: {fileID: 9197166424522500117}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5646a352582ee4673b1f72e3338dd9f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

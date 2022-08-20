@@ -8,10 +8,19 @@ using DG.Tweening;//DoTweenを使用する記述
 
 public class KukuModeMenuManager : MonoBehaviour
 {
+    public GameObject AdMobManager;
     public Button thisButton;
     // Start is called before the first frame update
     
     public void KukuHomeback(){
+        GameManager.singleton.SceneCount++;
+        GameManager.singleton.SaveSceneCount();
+        Debug.Log("SceneCount"+GameManager.singleton.SceneCount);
+        int IScount = GameManager.singleton.SceneCount;
+        if(IScount>0 && IScount%1 ==0){
+            AdMobManager.GetComponent<AdMobInterstitial>().ShowAdMobInterstitial();
+            return;
+        }
         SceneManager.LoadScene("Menu");
     }
 }

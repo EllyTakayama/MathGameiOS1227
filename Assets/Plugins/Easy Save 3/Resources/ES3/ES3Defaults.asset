@@ -29,9 +29,13 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
+    - Google.Play.Review
     - Assembly-CSharp-firstpass
     - Assembly-CSharp
+    - Google.Play.Core
+    - Google.Play.Common
     - Sirenix.OdinInspector.CompatibilityLayer
+    - Google.Android.AppBundle.Editor
     - PsdPlugin
     - GoogleMobileAds.Editor
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
