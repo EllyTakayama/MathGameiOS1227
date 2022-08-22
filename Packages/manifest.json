@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "api.natsuite.natshare": "1.2.6",
     "com.google.android.appbundle": "file:../GooglePackages/com.google.android.appbundle-1.8.0.tgz",
     "com.google.external-dependency-manager": "file:../GooglePackages/com.google.external-dependency-manager-1.2.172.tgz",
     "com.google.play.common": "file:../GooglePackages/com.google.play.common-1.8.0.tgz",
@@ -50,5 +51,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "NatML",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "api.natsuite"
+      ]
+    }
+  ]
 }

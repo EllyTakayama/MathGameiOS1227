@@ -20,11 +20,7 @@ public class TestToggle : MonoBehaviour
     {
      OnTestToggLoad();
      Debug.Log("TestQuestion"+testQuestion);
-     /*
-     if(GameManager.singleton.SceneCount==5||GameManager.singleton.SceneCount==30||
-        GameManager.singleton.SceneCount==800||GameManager.singleton.SceneCount==150){
-            StoreReviewManager.instance.RequestReview();
-        }*/
+     
     }
 
     // Update is called once per frame

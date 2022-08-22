@@ -6,8 +6,16 @@ public class StoreReviewManager : MonoBehaviour
 {
     void Start()
     {
-     RequestReview();
+        if(GameManager.singleton.SceneCount > 1){
+            RequestReview();
+        }
+     
      Debug.Log("レビュー表示");
+     /*
+     if(GameManager.singleton.SceneCount==5||GameManager.singleton.SceneCount==30||
+        GameManager.singleton.SceneCount==800||GameManager.singleton.SceneCount==150){
+            StoreReviewManager.instance.RequestReview();
+        }*/
     }
 
     public void RequestReview()

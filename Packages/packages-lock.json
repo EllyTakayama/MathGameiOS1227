@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "api.natsuite.natshare": {
+      "version": "1.2.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
     "com.google.android.appbundle": {
       "version": "file:../GooglePackages/com.google.android.appbundle-1.8.0.tgz",
       "depth": 0,

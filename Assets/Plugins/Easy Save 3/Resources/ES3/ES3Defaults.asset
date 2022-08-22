@@ -30,15 +30,21 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Google.Play.Review
+    - NatSuite.Sharing
     - Assembly-CSharp-firstpass
     - Assembly-CSharp
+    - CFXRDemo
     - Google.Play.Core
     - Google.Play.Common
     - Sirenix.OdinInspector.CompatibilityLayer
+    - CFXRRuntime
+    - KinoBloom.Runtime
     - Google.Android.AppBundle.Editor
     - PsdPlugin
-    - GoogleMobileAds.Editor
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
+    - CFXREditor
+    - GoogleMobileAds.Editor
+    - ToonyColorsPro.Demo.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
